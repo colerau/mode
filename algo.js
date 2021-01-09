@@ -16,14 +16,20 @@ function findMode(array) {
   let biggestValuesKey = -1
 
   // finding the biggest value and its corresponding key
+  let value
   Object.keys(object).forEach(key => {
-    let value = object[key]
+    value = object[key]
     if (value > biggestValue) {
       biggestValue = value
       biggestValuesKey = key
     }
   })
-  return biggestValuesKey
+
+  if (value === biggestValue) {
+    return -2
+  } else {
+    return biggestValuesKey
+  }
 }
 
 // mode is visibly 11
@@ -47,5 +53,10 @@ form.addEventListener("submit", e => {
     array.push(userInput[i])
   }
   let mode = findMode(array)
-  modeText.innerText = `The mode is: ${mode}`
+  debugger
+  if (mode === -2) {
+    modeText.innerText = `There was a tie`
+  } else {
+    modeText.innerText = `The mode is: ${mode}`
+  }
 })
