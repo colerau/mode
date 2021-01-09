@@ -37,6 +37,8 @@ let userInput = document.getElementById("user-array").value
 
 let form = document.getElementById("form")
 
+let modeText = document.getElementById("result")
+
 form.addEventListener("submit", e => {
   e.preventDefault()
   let userInput = document.getElementById("user-array").value.trim()
@@ -45,5 +47,5 @@ form.addEventListener("submit", e => {
     array.push(userInput[i])
   }
   let mode = findMode(array)
-  console.log(mode)
+  modeText.innerText = `The mode is: ${mode}`
 })
