@@ -25,11 +25,8 @@ function findMode(array) {
     }
   })
 
-  if (value === biggestValue) {
-    return -2
-  } else {
-    return biggestValuesKey
-  }
+  return biggestValuesKey
+
 }
 
 // mode is visibly 11
@@ -53,10 +50,5 @@ form.addEventListener("submit", e => {
     array.push(userInput[i])
   }
   let mode = findMode(array)
-  debugger
-  if (mode === -2) {
-    modeText.innerText = `There was a tie`
-  } else {
     modeText.innerText = `The mode is: ${mode}`
-  }
 })
