@@ -13,3 +13,4 @@ let array = [-2, 9, 9, 9, -2, -2, -2, -2, -2, -1, 0, 3, 1, 1, 1, 9, 10, 11, 11, 
 let result = findMode(array)
 
 console.log(result)
+
